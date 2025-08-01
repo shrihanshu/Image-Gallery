@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ImAGE</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <button id="sidebarToggle" class="sidebar-toggle">
+    <i class="fa fa-bars"></i>
+  </button>
+  <aside class="sidebar">
+    <div class="sidebar-header">Categories</div>
+    <ul class="sidebar-categories">
+      <li><a href="#" data-filter="all"><i class="fa-solid fa-th"></i> All</a></li>
+      <li><a href="#" data-filter="uploaded"><i class="fa-solid fa-upload"></i> Uploaded</a></li>
+      <li><a href="#" data-filter="nature"><i class="fa-solid fa-leaf"></i> Nature</a></li>
+      <li><a href="#" data-filter="animals"><i class="fa-solid fa-paw"></i> Animals</a></li>
+      <li><a href="#" data-filter="architecture"><i class="fa-solid fa-building"></i> Architecture</a></li>
+    </ul>
+  </aside>
+  <div class="page-title">
+    <img src="title-icon.png" alt="Photographer Icon" class="title-icon"> ImAGE
+  </div>
+  <div class="filters">
+    <button data-filter="all" class="active"><i class="fa-solid fa-th"></i> All</button>
+    <button data-filter="uploaded"><i class="fa-solid fa-upload"></i> Uploaded</button>
+    <button data-filter="nature"><i class="fa-solid fa-leaf"></i> Nature</button>
+    <button data-filter="animals"><i class="fa-solid fa-paw"></i> Animals</button>
+    <button data-filter="architecture"><i class="fa-solid fa-building"></i> Architecture</button>
+  </div>
+  <div class="search-bar">
+    <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+    <input type="text" id="searchInput" placeholder="Search images... (e.g. lake, fox, modern)">
+  </div>
+  <button id="themeToggle" class="theme-toggle" title="Toggle dark/light mode">
+    <i class="fa-solid fa-moon"></i>
+  </button>
+  <button id="uploadBtn" class="upload-btn" title="Upload photos from device">
+    <i class="fa-solid fa-upload"></i>
+  </button>
+  <input type="file" id="fileInput" accept="image/*" multiple style="display: none;">
+  <main>
+    <div class="gallery">
+      <!-- Images will be inserted here by JS or statically for demo -->
+    </div>
+    <div class="navigation">
+      <button id="prevBtn"><i class="fa-solid fa-arrow-left"></i> Prev</button>
+      <button id="nextBtn">Next <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </main>
+  <div id="lightbox" class="lightbox">
+    <span class="close"><i class="fa-solid fa-xmark"></i></span>
+    <img class="lightbox-content" src="" alt="">
+    <div class="caption"></div>
+    <button class="lightbox-prev"><i class="fa-solid fa-arrow-left"></i></button>
+    <button class="lightbox-next"><i class="fa-solid fa-arrow-right"></i></button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html> 
